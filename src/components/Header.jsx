@@ -2,11 +2,23 @@ import Logo from "./Logo";
 import Navigation from "./Navigation";
 import Hamburger from "./Hamburger";
 import Menu from "./Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 function Header() {
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    addWidthListener();
+  }, []);
+
+  function addWidthListener() {
+    return window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768) {
+        return setMenu(false);
+      }
+    });
+  }
 
   return (
     <>
