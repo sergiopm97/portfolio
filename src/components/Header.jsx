@@ -7,22 +7,38 @@ import { AnimatePresence } from "framer-motion";
 
 function Header() {
   const [menu, setMenu] = useState(false);
+  const [header, setHeader] = useState(false);
 
   useEffect(() => {
     addWidthListener();
+    addScrollListener();
   }, []);
 
   function addWidthListener() {
     return window.addEventListener("resize", function () {
-      if (window.innerWidth >= 768) {
+      if (this.innerWidth >= 768) {
         return setMenu(false);
+      }
+    });
+  }
+
+  function addScrollListener() {
+    return window.addEventListener("scroll", function () {
+      if (this.scrollY > 0) {
+        return setHeader(true);
+      } else {
+        return setHeader(false);
       }
     });
   }
 
   return (
     <>
-      <header className="w-full h-24 flex items-center justify-center font-spaceMono">
+      <header
+        className={`w-full h-24 flex items-center justify-center sticky top-0 font-spaceMono transition-all ${
+          header && "bg-dark-navy shadow-md transition-all"
+        }`}
+      >
         <div className="w-11/12 h-4/5 max-w-screen-2xl flex items-center justify-between">
           <Logo />
           <Navigation />

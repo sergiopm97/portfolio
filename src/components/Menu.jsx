@@ -6,7 +6,7 @@ function Menu(props) {
   return (
     <>
       <motion.div
-        className="w-4/6 h-screen flex items-center justify-center fixed top-0 font-spaceMono bg-light-slate z-20"
+        className="w-9/12 h-screen flex items-center justify-center fixed top-0 font-spaceMono bg-light-slate z-20"
         initial={{ x: "-100%" }}
         animate={{ x: "0%" }}
         exit={{ x: "-100%" }}
