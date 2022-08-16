@@ -13,7 +13,7 @@ function Menu(props) {
         transition={{ duration: 0.5 }}
       >
         <Cross setMenu={props.setMenu} />
-        <MenuNavigation />
+        <MenuNavigation setMenu={props.setMenu} />
       </motion.div>
       <motion.div
         className="w-screen h-screen fixed top-0 bg-std-navy/[0.8] z-10"
