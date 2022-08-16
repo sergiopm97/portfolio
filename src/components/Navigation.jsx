@@ -14,7 +14,8 @@ function Navigation() {
             return (
               <li className="group flex items-center gap-1 cursor-pointer text-lg" key={navigationItem.id}>
                 <span className="w-8 h-8 flex items-center justify-center rounded-full text-std-green group-hover:-translate-x-2 group-hover:bg-std-slate transition-all">
-                  {navigationItem.id}.
+                  {navigationItem.id}
+                  <span className="group-hover:hidden">.</span>
                 </span>
                 <h1 className="text-std-white group-hover:text-std-green">{navigationItem.name}</h1>
               </li>
