@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import Hamburger from "./Hamburger";
 import Menu from "./Menu";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -16,7 +17,7 @@ function Header() {
           <Hamburger setMenu={setMenu} />
         </div>
       </header>
-      {menu && <Menu setMenu={setMenu} />}
+      <AnimatePresence>{menu && <Menu setMenu={setMenu} />}</AnimatePresence>
     </>
   );
 }
