@@ -36,7 +36,7 @@ function Header() {
     <>
       <header
         className={`w-full h-24 flex items-center justify-center sticky top-0 font-spaceMono transition-all ${
-          header && "bg-dark-navy shadow-md transition-all"
+          header && "bg-dark-navy/[0.90] shadow-md transition-all"
         }`}
       >
         <div className="w-11/12 h-4/5 max-w-screen-2xl flex items-center justify-between">
