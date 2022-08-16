@@ -11,11 +11,8 @@ function MenuNavigation() {
       <ul className="flex gap-10 sm:gap-12 flex-col">
         {navigationData.map((navigationItem) => {
           return (
-            <a href={navigationItem.url}>
-              <li
-                className="group flex items-center gap-4 cursor-pointer text-2xl sm:text-3xl"
-                key={navigationItem.id}
-              >
+            <a href={navigationItem.url} key={navigationItem.id}>
+              <li className="group flex items-center gap-4 cursor-pointer text-2xl sm:text-3xl">
                 <span className="w-12 sm:w-14 h-12 sm:h-14 flex items-center justify-center rounded-full bg-std-navy text-std-green">
                   {navigationItem.id}
                 </span>
