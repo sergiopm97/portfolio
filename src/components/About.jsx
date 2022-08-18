@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import { config } from "../../config";
 
 function About() {
   return (
-    <div className="w-full xs:h-[calc(100vh-6rem)] flex lg:flex-row flex-col items-center lg:justify-between justify-center lg:gap-0 sm:gap-14 gap-12 xs:mt-0 mt-5 lg:pl-40 lg:pr-20 xs:px-2 px-5">
-      <div className="lg:w-6/12 w-full flex flex-col lg:text-left xs:text-center text-left">
+    <div className="w-full xs:h-[calc(100vh-6rem)] lg:static xs:relative static flex lg:flex-row flex-col items-center lg:justify-between justify-center lg:gap-0 sm:gap-14 gap-12 xs:mt-0 mt-5 lg:pl-40 lg:pr-20 xs:px-2 px-5">
+      <div className="lg:w-6/12 w-full lg:relative xs:static relative flex flex-col lg:items-baseline xs:items-center items-baseline lg:text-left xs:text-center text-left">
         <h1 className="xl:text-2xl lg:text-xl sm:text-3xl xs:text-2xl text-xl mb-6 text-std-green font-spaceMono">
           Hello! My name is
         </h1>
@@ -17,11 +18,16 @@ function About() {
           I am a developer specialized in data analysis and data processing, AI creation and currently growing in
           the web development world with a strong background in frontend but with basic knowledge in backend.
         </p>
-        <a href={config.apiEndpoints.resume}>
-          <button className="lg:text-lg sm:text-xl  text-base lg:px-6 sm:px-12 px-8 lg:py-4 sm:py-6 py-4 rounded text-std-green bg-dark-navy/[0.5] font-semibold hover:bg-dark-navy transition-colors">
-            Check my resume
-          </button>
-        </a>
+        <button className="lg:w-52 sm:w-64 xs:w-52 w-48 lg:h-14 sm:h-16 xs:h-14 h-12 lg:text-lg sm:text-xl text-base rounded text-std-green bg-dark-navy/[0.5] font-semibold hover:bg-dark-navy transition-colors">
+          <a href={config.apiEndpoints.resume}>Check my resume</a>
+        </button>
+        <motion.img
+          className="absolute lg:bottom-[-3%] xs:bottom-10 bottom-0 lg:left-56 xs:right-10 right-2"
+          src="src/assets/sunglasses_emoji.png"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 10, repeat: Infinity }}
+        ></motion.img>
       </div>
       <div className="lg:w-5/12 w-full flex justify-center">
         <img className="lg:w-full md:w-4/12 xs:w-5/12 w-7/12" src="src/assets/programmer.gif"></img>
