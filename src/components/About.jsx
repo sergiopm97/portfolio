@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 import { config } from "../../config";
 
 function About() {
@@ -27,7 +28,14 @@ function About() {
           animate={{ y: "0%", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          I develop web and AI.
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString("I develop web and AI.").pauseFor(2500).deleteAll().start();
+            }}
+            options={{
+              loop: true,
+            }}
+          ></Typewriter>
         </motion.h3>
         <motion.p
           className="lg:block xs:hidden block xl:text-xl text-lg mb-10 text-std-slate font-roboto"
