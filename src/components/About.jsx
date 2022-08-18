@@ -72,9 +72,14 @@ function About() {
         className="lg:w-5/12 w-full flex justify-center"
         initial={{ y: "100%", opacity: 0 }}
         animate={{ y: "0%", opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.1 }}
       >
-        <img className="lg:w-full md:w-4/12 xs:w-5/12 w-7/12" src="src/assets/programmer.gif"></img>
+        <motion.img
+          className="lg:w-full md:w-4/12 xs:w-5/12 w-7/12"
+          src="src/assets/programmer.gif"
+          animate={{ y: ["0%", "-1.5%", "0%"] }}
+          transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
+        ></motion.img>
       </motion.div>
     </div>
   );
