@@ -61,7 +61,7 @@ function About() {
           transition={{ duration: 0.5, delay: 1.7 }}
         >
           <motion.img
-            src="src/assets/sunglasses_emoji.png"
+            src="sunglasses_emoji.png"
             initial={{ rotate: 0 }}
             animate={{ rotate: 360 }}
             transition={{ duration: 5, ease: "linear", repeat: Infinity }}
@@ -76,7 +76,7 @@ function About() {
       >
         <motion.img
           className="lg:w-full md:w-4/12 xs:w-5/12 w-7/12"
-          src="src/assets/programmer.gif"
+          src="programmer.gif"
           animate={{ y: ["0%", "-1.5%", "0%"] }}
           transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
         ></motion.img>
