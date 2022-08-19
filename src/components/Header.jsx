@@ -35,7 +35,7 @@ function Header() {
   return (
     <>
       <header
-        className={`w-full h-24 flex items-center justify-center sticky top-0 font-spaceMono transition-all ${
+        className={`w-full h-24 flex items-center justify-center sticky top-0 font-spaceMono z-10 transition-all ${
           header && "bg-dark-navy/[0.90] shadow-md transition-all"
         }`}
       >
