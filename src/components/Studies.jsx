@@ -54,20 +54,23 @@ function Studies() {
     });
 
     const ironhackData = studiesData.find((object) => {
-      return object.name === "Ironhack Amsterdam";
+      return object.name === "Ironhack";
     });
 
     return (
-      <div className="w-full pt-32 mt-[-8rem] lg:pl-40 lg:pr-20" id="studies">
-        <div className="xl:text-4xl mb-16">
+      <div
+        className="w-full md:static relative xs:pt-32 pt-32 xs:mt-[-8rem] lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+        id="studies"
+      >
+        <div className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10">
           <h1 className="text-std-white font-semibold">
             <span className="mr-2 text-std-green font-spaceMono font-normal">1.</span>
             Studies
           </h1>
         </div>
-        <div className="flex gap-2 mb-20 border-b-2 border-std-green ">
+        <div className="flex xs:flex-nowrap flex-wrap sm:gap-2 gap-1 md:mb-20 mb-10 xs:border-b-2 border-b-0 border-std-green ">
           <a
-            className={`xl:text-2xl xl:px-4 xl:py-1 border-x-2 border-t-2 border-std-green/[0] cursor-pointer text-std-green hover:bg-std-green/[0.1] transition-colors ${
+            className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
               esic && "bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("esic")}
@@ -75,7 +78,7 @@ function Studies() {
             ESIC
           </a>
           <a
-            className={`xl:text-2xl xl:px-4 xl:py-1 border-x-2 border-t-2 border-std-green/[0] cursor-pointer text-std-green hover:bg-std-green/[0.1] transition-colors ${
+            className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
               aepiFirst && "bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiFirst")}
@@ -83,7 +86,7 @@ function Studies() {
             AEPI
           </a>
           <a
-            className={`xl:text-2xl xl:px-4 xl:py-1 border-x-2 border-t-2 border-std-green/[0] cursor-pointer text-std-green hover:bg-std-green/[0.1] transition-colors ${
+            className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
               aepiSecond && "bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiSecond")}
@@ -91,7 +94,7 @@ function Studies() {
             AEPI
           </a>
           <a
-            className={`xl:text-2xl xl:px-4 xl:py-1 border-x-2 border-t-2 border-std-green/[0] cursor-pointer text-std-green hover:bg-std-green/[0.1] transition-colors ${
+            className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
               ironhack && "bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("ironhack")}
@@ -100,66 +103,99 @@ function Studies() {
           </a>
         </div>
         {esic && (
-          <div className="flex gap-40">
-            <div className="w-6/12">
-              <h1 className="text-2xl mb-2 text-std-white font-semibold">
+          <div className="flex items-center xl:gap-40 lg:gap-32 md:gap-24">
+            <div className="md:w-6/12 w-full">
+              <h1 className="xl:text-2xl md:text-xl xs:text-2xl text-xl mb-2 text-std-white font-semibold">
                 @{esicData.name}
-                <span className="text-xl ml-4 text-light-slate font-normal">({esicData.degree})</span>
+                <span className="xl:text-xl md:text-lg xs:text-xl text-lg ml-4 text-light-slate font-normal">
+                  ({esicData.degree})
+                </span>
               </h1>
-              <h2 className="text-xl mb-6 text-light-slate font-spaceMono italic">{esicData.time}</h2>
-              <p className="text-xl text-std-slate">{esicData.description}</p>
+              <h2 className="xl:text-xl md:text-lg xs:text-xl text-lg mb-6 text-light-slate font-spaceMono italic">
+                {esicData.time}
+              </h2>
+              <p className="xl:text-2xl md:text-lg xs:text-xl text-lg text-std-slate">{esicData.description}</p>
             </div>
-            <div className="flex justify-start">
-              <img className="w-80" src={generateImageApiCall(esicData.image)}></img>
+            <div className="md:flex md:justify-start md:static absolute xs:top-80 bottom-0 sm:right-20 xs:right-10 right-5 md:opacity-100 opacity-20">
+              <img
+                className="xl:w-80 md:w-56 sm:w-40 xs:w-32 w-28"
+                src={generateImageApiCall(esicData.image)}
+              ></img>
             </div>
           </div>
         )}
         {aepiFirst && (
-          <div className="flex items-center gap-40">
-            <div className="w-6/12">
-              <h1 className="text-2xl mb-2 text-std-white font-semibold">
+          <div className="flex items-center xl:gap-40 lg:gap-32 md:gap-24">
+            <div className="md:w-6/12 w-full">
+              <h1 className="xl:text-2xl md:text-xl xs:text-2xl text-xl mb-2 text-std-white font-semibold">
                 @{aepiPythonData.name}
-                <span className="text-xl ml-4 text-light-slate font-normal">({aepiPythonData.degree})</span>
+                <span className="xl:text-xl md:text-lg xs:text-xl text-lg ml-4 text-light-slate font-normal">
+                  ({aepiPythonData.degree})
+                </span>
               </h1>
-              <h2 className="text-xl mb-6 text-light-slate font-spaceMono italic">{aepiPythonData.time}</h2>
-              <p className="text-xl text-std-slate">{aepiPythonData.description}</p>
+              <h2 className="xl:text-xl md:text-lg xs:text-xl text-lg mb-6 text-light-slate font-spaceMono italic">
+                {aepiPythonData.time}
+              </h2>
+              <p className="xl:text-2xl md:text-lg xs:text-xl text-lg text-std-slate">
+                {aepiPythonData.description}
+              </p>
             </div>
-            <div className="flex justify-start">
-              <img className="w-80" src={generateImageApiCall(aepiPythonData.image)}></img>
+            <div className="md:flex justify-start md:static absolute xs:top-80 bottom-0 sm:right-20 xs:right-10 right-5 md:opacity-100 opacity-20">
+              <img
+                className="xl:w-80 md:w-56 sm:w-40 xs:w-32 w-28"
+                src={generateImageApiCall(aepiPythonData.image)}
+              ></img>
             </div>
           </div>
         )}
         {aepiSecond && (
-          <div className="flex items-center gap-40">
-            <div className="w-6/12">
-              <h1 className="text-2xl mb-2 text-std-white font-semibold">
+          <div className="flex items-center xl:gap-40 lg:gap-32 md:gap-24">
+            <div className="md:w-6/12 w-full">
+              <h1 className="xl:text-2xl md:text-xl xs:text-2xl text-xl mb-2 text-std-white font-semibold">
                 @{aepiDataScientistData.name}
-                <span className="text-xl ml-4 text-light-slate font-normal">({aepiDataScientistData.degree})</span>
+                <span className="xl:text-xl md:text-lg xs:text-xl text-lg ml-4 text-light-slate font-normal">
+                  ({aepiDataScientistData.degree})
+                </span>
               </h1>
-              <h2 className="text-xl mb-6 text-light-slate font-spaceMono italic">{aepiDataScientistData.time}</h2>
-              <p className="text-xl text-std-slate">{aepiDataScientistData.description}</p>
+              <h2 className="xl:text-xl md:text-lg xs:text-xl text-lg mb-6 text-light-slate font-spaceMono italic">
+                {aepiDataScientistData.time}
+              </h2>
+              <p className="xl:text-2xl md:text-lg xs:text-xl text-lg text-std-slate">
+                {aepiDataScientistData.description}
+              </p>
             </div>
-            <div className="flex justify-start">
-              <img className="w-80" src={generateImageApiCall(aepiDataScientistData.image)}></img>
+            <div className="md:flex justify-start md:static absolute xs:top-80 bottom-0 sm:right-20 xs:right-10 right-5 md:opacity-100 opacity-20">
+              <img
+                className="xl:w-80 md:w-56 sm:w-40 xs:w-32 w-28"
+                src={generateImageApiCall(aepiDataScientistData.image)}
+              ></img>
             </div>
           </div>
         )}
         {ironhack && (
-          <div className="flex items-center gap-40">
-            <div className="w-6/12">
-              <h1 className="text-2xl mb-2 text-std-white font-semibold">
+          <div className="flex items-center xl:gap-40 lg:gap-32 md:gap-24">
+            <div className="md:w-6/12 w-full">
+              <h1 className="xl:text-2xl md:text-xl xs:text-2xl text-xl mb-2 text-std-white font-semibold">
                 @{ironhackData.name}
-                <span className="text-xl ml-4 text-light-slate font-normal">({ironhackData.degree})</span>
+                <span className="xl:text-xl md:text-lg xs:text-xl text-lg ml-4 text-light-slate font-normal">
+                  ({ironhackData.degree})
+                </span>
               </h1>
-              <h2 className="text-xl mb-6 text-light-slate font-spaceMono italic">{ironhackData.time}</h2>
-              <p className="text-xl text-std-slate">{ironhackData.description}</p>
+              <h2 className="xl:text-xl md:text-lg xs:text-xl text-lg mb-6 text-light-slate font-spaceMono italic">
+                {ironhackData.time}
+              </h2>
+              <p className="xl:text-2xl md:text-lg xs:text-xl text-lg text-std-slate">
+                {ironhackData.description}
+              </p>
             </div>
-            <div className="flex justify-start">
-              <img className="w-64" src={generateImageApiCall(ironhackData.image)}></img>
+            <div className="md:flex justify-start md:static absolute xs:top-80 bottom-0 sm:right-20 xs:right-10 right-5 md:opacity-100 opacity-20">
+              <img
+                className="xl:w-72 md:w-56 sm:w-40 xs:w-32 w-28"
+                src={generateImageApiCall(ironhackData.image)}
+              ></img>
             </div>
           </div>
         )}
-        <div className="h-screen"></div>
       </div>
     );
   }

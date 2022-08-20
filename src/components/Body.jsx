@@ -8,6 +8,7 @@ function Body() {
       <Sidebar />
       <About />
       <Studies />
+      <div className="h-screen"></div>
     </div>
   );
 }

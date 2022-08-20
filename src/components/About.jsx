@@ -38,7 +38,7 @@ function About() {
           ></Typewriter>
         </motion.h3>
         <motion.p
-          className="lg:block xs:hidden block xl:text-xl text-lg mb-10 text-std-slate font-roboto"
+          className="lg:block xs:hidden block xl:text-2xl text-lg mb-10 text-std-slate font-roboto"
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
