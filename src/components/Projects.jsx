@@ -18,12 +18,28 @@ function Projects() {
     slidesToShow: 2,
     slidesToScroll: 1,
     cssEase: "ease-in-out",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          cssEase: "ease-in-out",
+        },
+      },
+    ],
   };
 
   if (projectsData) {
     return (
-      <div className="w-full pt-32 mt-[-8rem] pl-40 pr-20" id="projects">
-        <div className="text-4xl mb-16">
+      <div
+        className="w-full pt-32 mt-[-8rem] lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+        id="projects"
+      >
+        <div className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10">
           <h1 className="text-std-white font-semibold">
             <span className="mr-2 text-std-green font-spaceMono font-normal">2.</span>
             Proyects
