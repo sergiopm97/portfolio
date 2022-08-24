@@ -84,7 +84,7 @@ function Studies() {
         >
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              esic && "bg-std-green/[0.1] border-std-green/[1]"
+              esic && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("esic")}
           >
@@ -92,7 +92,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              aepiFirst && "bg-std-green/[0.1] border-std-green/[1]"
+              aepiFirst && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiFirst")}
           >
@@ -100,7 +100,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              aepiSecond && "bg-std-green/[0.1] border-std-green/[1]"
+              aepiSecond && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiSecond")}
           >
@@ -108,7 +108,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              ironhack && "bg-std-green/[0.1] border-std-green/[1]"
+              ironhack && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("ironhack")}
           >
