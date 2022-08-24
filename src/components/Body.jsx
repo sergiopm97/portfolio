@@ -1,4 +1,5 @@
 import About from "./About";
+import Projects from "./Projects";
 import Sidebar from "./Sidebar";
 import Studies from "./Studies";
 
@@ -8,6 +9,7 @@ function Body() {
       <Sidebar />
       <About />
       <Studies />
+      <Projects />
       <div className="h-screen"></div>
     </div>
   );

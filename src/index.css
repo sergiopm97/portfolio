@@ -11,3 +11,32 @@
     @apply bg-std-navy;
   }
 }
+
+.slick-slide {
+  padding: 1rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  @apply text-std-green;
+}
+
+.slick-dots li button:before {
+  @apply text-std-green;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-std-green;
+}
+
+@media (max-width: 475px) {
+  .slick-prev {
+    margin-left: 1rem;
+    z-index: 999;
+  }
+
+  .slick-next {
+    margin-right: 1rem;
+    z-index: 999;
+  }
+}

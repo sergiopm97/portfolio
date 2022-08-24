@@ -60,7 +60,7 @@ function Studies() {
 
     return (
       <div
-        className="w-full md:static relative xs:pt-32 pt-32 xs:mt-[-8rem] lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+        className="w-full md:static relative xs:pt-32 pt-32 xs:mt-[-8rem] mb-40 lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
         id="studies"
       >
         <motion.div
@@ -84,7 +84,7 @@ function Studies() {
         >
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              esic && "bg-std-green/[0.1] border-std-green/[1]"
+              esic && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("esic")}
           >
@@ -92,7 +92,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              aepiFirst && "bg-std-green/[0.1] border-std-green/[1]"
+              aepiFirst && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiFirst")}
           >
@@ -100,7 +100,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              aepiSecond && "bg-std-green/[0.1] border-std-green/[1]"
+              aepiSecond && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("aepiSecond")}
           >
@@ -108,7 +108,7 @@ function Studies() {
           </a>
           <a
             className={`xl:text-2xl lg:text-xl xs:text-2xl text-base sm:px-4 px-3 py-1 xs:border-x-2 xs:border-t-2 xs:border-0 border-2 border-std-green/[0] cursor-pointer xs:bg-transparent bg-dark-navy text-std-green hover:bg-std-green/[0.1] transition-colors ${
-              ironhack && "bg-std-green/[0.1] border-std-green/[1]"
+              ironhack && "!bg-std-green/[0.1] border-std-green/[1]"
             }`}
             onClick={() => handleTabs("ironhack")}
           >
