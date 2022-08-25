@@ -16,21 +16,29 @@ function Contact() {
   });
 
   return (
-    <div className="w-full pt-32 mt-[-8rem] pl-40 pr-20" id="contact">
-      <div className="text-4xl mb-16">
+    <div
+      className="w-full pt-32 mt-[-8rem] mb-40 lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+      id="contact"
+    >
+      <div className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10">
         <h1 className="text-std-white font-semibold">
           <span className="mr-2 text-std-green font-spaceMono font-normal">3.</span>
           Contact
         </h1>
       </div>
-      <div className="flex items-center justify-around rounded-2xl py-14 bg-dark-navy/[0.5]">
-        <form className="w-6/12 flex flex-col gap-6" onSubmit={formik.handleSubmit}>
+      <div className="flex items-center justify-around rounded-2xl md:py-14 py-10 bg-dark-navy/[0.5]">
+        <form className="md:w-6/12 w-11/12 flex flex-col gap-6" onSubmit={formik.handleSubmit}>
           <div className="flex flex-col gap-4 relative">
-            <label className="text-2xl text-std-white font-roboto" htmlFor="name">
+            <label
+              className="xl:text-2xl lg:text-xl xs:text-2xl text-xl text-std-white font-roboto"
+              htmlFor="name"
+            >
               Name
             </label>
             {formik.errors.name && (
-              <span className="right-0 bottom-12 absolute text-red-500 font-spaceMono">Name is required</span>
+              <span className="right-0 bottom-12 xs:text-base text-sm absolute text-red-500 font-spaceMono">
+                Name is required
+              </span>
             )}
             <input
               className={`h-10 border-[0.1rem] border-transparent ${
@@ -45,14 +53,21 @@ function Contact() {
             />
           </div>
           <div className="flex flex-col gap-4 relative">
-            <label className="text-2xl text-std-white font-roboto" htmlFor="email">
+            <label
+              className="xl:text-2xl lg:text-xl xs:text-2xl text-xl text-std-white font-roboto"
+              htmlFor="email"
+            >
               Email
             </label>
             {formik.errors.email && formik.errors.email != signUpEmailError && (
-              <span className="right-0 bottom-12 absolute text-red-500 font-spaceMono">Email is required</span>
+              <span className="right-0 bottom-12 xs:text-base text-sm absolute text-red-500 font-spaceMono">
+                Email is required
+              </span>
             )}
             {formik.errors.email == signUpEmailError && (
-              <span className="right-0 bottom-12 absolute text-red-500 font-spaceMono">Use a valid email</span>
+              <span className="right-0 bottom-12 xs:text-base text-sm absolute text-red-500 font-spaceMono">
+                Use a valid email
+              </span>
             )}
             <input
               className={`h-10 border-[0.1rem] border-transparent ${
@@ -66,8 +81,11 @@ function Contact() {
               value={formik.values.email}
             />
           </div>
-          <div className="flex flex-col gap-3">
-            <label className="text-2xl text-std-white font-roboto" htmlFor="reason">
+          <div className="flex flex-col gap-4">
+            <label
+              className="xl:text-2xl lg:text-xl xs:text-2xl text-xl text-std-white font-roboto"
+              htmlFor="reason"
+            >
               Reason
             </label>
             <select
@@ -89,8 +107,8 @@ function Contact() {
             Send
           </button>
         </form>
-        <div className="flex justify-center w-4/12">
-          <img className="w-80" src="/email.gif" />
+        <div className="md:flex hidden justify-center w-4/12">
+          <img className="w-96" src="/email.gif" />
         </div>
       </div>
     </div>
