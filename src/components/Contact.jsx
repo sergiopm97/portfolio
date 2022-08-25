@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import { signUpValidation, signUpEmailError } from "../validation/signUp";
+import { motion } from "framer-motion";
 
 function Contact() {
   const formik = useFormik({
@@ -20,13 +21,25 @@ function Contact() {
       className="w-full pt-32 mt-[-8rem] mb-40 lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
       id="contact"
     >
-      <div className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10">
+      <motion.div
+        className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10"
+        initial={{ y: "50%", opacity: 0 }}
+        whileInView={{ y: "0%", opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <h1 className="text-std-white font-semibold">
           <span className="mr-2 text-std-green font-spaceMono font-normal">3.</span>
           Contact
         </h1>
-      </div>
-      <div className="flex items-center justify-around rounded-2xl md:py-14 py-10 bg-dark-navy/[0.5]">
+      </motion.div>
+      <motion.div
+        className="flex items-center justify-around rounded-2xl md:py-14 py-10 bg-dark-navy/[0.5]"
+        initial={{ y: "50%", opacity: 0 }}
+        whileInView={{ y: "0%", opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <form className="md:w-6/12 w-11/12 flex flex-col gap-6" onSubmit={formik.handleSubmit}>
           <div className="flex flex-col gap-4 relative">
             <label
@@ -110,7 +123,7 @@ function Contact() {
         <div className="md:flex hidden justify-center w-4/12">
           <img className="w-96" src="/email.gif" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
