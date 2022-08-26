@@ -1,8 +1,25 @@
+import { useState } from "react";
 import { useFormik } from "formik";
 import { signUpValidation, signUpEmailError } from "../validation/signUp";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { TiTick } from "react-icons/ti";
 
 function Contact() {
+  const [sendingEmail, setSendingEmail] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+
+  function sendEmail(contactData) {
+    emailjs
+      .send("service_xrd91t3", "template_jfif8g5", contactData, import.meta.env.VITE_EMAILJS_API_KEY)
+      .then((result) => {
+        if (result) {
+          setEmailSent(true);
+          setSendingEmail(false);
+        }
+      });
+  }
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -11,8 +28,14 @@ function Contact() {
     },
     validationSchema: signUpValidation,
     validateOnChange: false,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: (values, actions) => {
+      setSendingEmail(true);
+      sendEmail(values);
+      actions.resetForm({
+        name: "",
+        email: "",
+        reason: "Job",
+      });
     },
   });
 
@@ -113,12 +136,14 @@ function Contact() {
               <option value="Other">Other</option>
             </select>
           </div>
-          <button
-            className="h-10 border-2 mt-3 text-std-green border-std-green font-spaceMono font-semibold hover:bg-std-green/[0.1] transition-colors"
-            type="submit"
-          >
-            Send
-          </button>
+          <div className="h-10 flex items-center justify-center gap-1 border-2 mt-3 text-std-green border-std-green font-spaceMono hover:bg-std-green/[0.1] transition-colors">
+            <button className={`${!sendingEmail && !emailSent && "h-full w-full"}`} type="submit">
+              {!sendingEmail && !emailSent && "Send"} {sendingEmail && "Sending email..."}
+              {emailSent && "Email sent"}
+            </button>
+            {sendingEmail && <img className="w-5" src="spinner_loader.gif" />}
+            {emailSent && <TiTick className="w-5 stroke-std-green" />}
+          </div>
         </form>
         <div className="md:flex hidden justify-center w-4/12">
           <img className="w-96" src="/email.gif" />
