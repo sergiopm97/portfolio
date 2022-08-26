@@ -37,7 +37,7 @@ function Projects() {
   if (projectsData) {
     return (
       <div
-        className="w-full pt-32 mt-[-8rem] lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+        className="w-full pt-32 mt-[-8rem] mb-40 lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
         id="projects"
       >
         <motion.div
