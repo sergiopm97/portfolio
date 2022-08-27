@@ -49,7 +49,7 @@ function Projects() {
         >
           <h1 className="text-std-white font-semibold">
             <span className="mr-2 text-std-green font-spaceMono font-normal">2.</span>
-            Proyects
+            Projects
           </h1>
         </motion.div>
         <motion.div
