@@ -3,6 +3,7 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import Sidebar from "./Sidebar";
 import Studies from "./Studies";
+import Footer from "./Footer";
 
 function Body() {
   return (
@@ -12,7 +13,7 @@ function Body() {
       <Studies />
       <Projects />
       <Contact />
-      <div className="h-screen"></div>
+      <Footer />
     </div>
   );
 }
