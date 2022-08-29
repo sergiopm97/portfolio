@@ -35,11 +35,11 @@ function Header() {
   return (
     <>
       <header
-        className={`w-full h-24 flex items-center justify-center sticky top-0 font-spaceMono z-10 transition-all ${
+        className={`sticky top-0 z-10 flex h-24 w-full items-center justify-center font-spaceMono transition-all ${
           header && "bg-dark-navy/[0.90] shadow-md transition-all"
         }`}
       >
-        <div className="w-11/12 h-4/5 max-w-screen-2xl flex items-center justify-between">
+        <div className="flex h-4/5 w-11/12 max-w-screen-2xl items-center justify-between">
           <Logo />
           <Navigation />
           <Hamburger setMenu={setMenu} />

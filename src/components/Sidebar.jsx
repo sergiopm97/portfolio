@@ -22,20 +22,20 @@ function Sidebar() {
 
     return (
       <motion.div
-        className="hidden lg:flex w-20 h-[calc(100vh-6rem)] flex-col items-center justify-end fixed"
+        className="fixed hidden h-[calc(100vh-6rem)] w-20 flex-col items-center justify-end lg:flex"
         initial={{ y: "50%", opacity: 0 }}
         animate={{ y: "0%", opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.25 }}
       >
         <div className="flex flex-col gap-5">
           <a href={githubLink} target={"_blank"}>
-            <FiGithub className="w-6 h-6 cursor-pointer fill-0 stroke-std-slate hover:stroke-std-green hover:-translate-y-1 transition-all" />
+            <FiGithub className="fill-0 h-6 w-6 cursor-pointer stroke-std-slate transition-all hover:-translate-y-1 hover:stroke-std-green" />
           </a>
           <a href={linkedinLink} target={"_blank"}>
-            <FiLinkedin className="w-6 h-6 cursor-pointer fill-0 stroke-std-slate hover:stroke-std-green hover:-translate-y-1 transition-all" />
+            <FiLinkedin className="fill-0 h-6 w-6 cursor-pointer stroke-std-slate transition-all hover:-translate-y-1 hover:stroke-std-green" />
           </a>
         </div>
-        <div className="w-0.5 h-52 mt-12 bg-std-slate"></div>
+        <div className="mt-12 h-52 w-0.5 bg-std-slate"></div>
       </motion.div>
     );
   }

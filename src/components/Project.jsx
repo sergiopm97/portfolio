@@ -13,34 +13,36 @@ function Project(props) {
   const portfolio = props.project === "Portfolio";
 
   return (
-    <div className="flex flex-col justify-center gap-5 relative xs:h-64 h-80 p-5 bg-dark-navy hover:shadow-[6px_6px_0px_0px_rgba(100,255,218,0.6)] transition-all">
-      <h1 className="xl:text-3xl md:text-2xl sm:text-3xl text-2xl text-light-slate font-roboto font-semibold">
+    <div className="relative flex h-80 flex-col justify-center gap-5 bg-dark-navy p-5 transition-all hover:shadow-[6px_6px_0px_0px_rgba(100,255,218,0.6)] xs:h-64">
+      <h1 className="font-roboto text-2xl font-semibold text-light-slate sm:text-3xl md:text-2xl xl:text-3xl">
         {selectedProject.Name}
       </h1>
-      <h2 className="xl:text-xl lg:text-lg md:text-base sm:text-xl text-base text-std-slate font-roboto">
+      <h2 className="font-roboto text-base text-std-slate sm:text-xl md:text-base lg:text-lg xl:text-xl">
         {selectedProject.Description}
       </h2>
       <a
         href={selectedProject.Link}
-        className="flex items-center justify-center xs:w-32 w-24 xs:h-10 h-8 xl:text-base lg:text-sm md:text-xs sm:text-base text-sm border-2 border-std-green text-std-green font-spaceMono font-semibold hover:bg-std-green/[0.1]"
+        className="flex h-8 w-24 items-center justify-center border-2 border-std-green font-spaceMono text-sm font-semibold text-std-green hover:bg-std-green/[0.1] xs:h-10 xs:w-32 sm:text-base md:text-xs lg:text-sm xl:text-base"
       >
         See more
       </a>
-      <div className="flex gap-2 absolute bottom-0 right-0 pb-3 pr-3">
-        {sokkai && <FaPython className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />}
+      <div className="absolute bottom-0 right-0 flex gap-2 pb-3 pr-3">
+        {sokkai && (
+          <FaPython className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+        )}
         {samba && (
           <>
-            <FaPython className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
-            <SiJavascript className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
-            <AiFillHtml5 className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
-            <SiCss3 className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
+            <FaPython className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+            <SiJavascript className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+            <AiFillHtml5 className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+            <SiCss3 className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
           </>
         )}
         {portfolio && (
           <>
-            <SiJavascript className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
-            <AiFillHtml5 className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
-            <SiCss3 className="xl:w-6 xl:h-6 lg:w-5 lg:h-5 w-3 h-3 fill-std-green opacity-50" />
+            <SiJavascript className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+            <AiFillHtml5 className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
+            <SiCss3 className="h-3 w-3 fill-std-green opacity-50 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
           </>
         )}
       </div>

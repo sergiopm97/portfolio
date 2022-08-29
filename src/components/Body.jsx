@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 function Body() {
   return (
-    <div className="w-full max-w-screen-2xl m-auto">
+    <div className="m-auto w-full max-w-screen-2xl">
       <Sidebar />
       <About />
       <Studies />
