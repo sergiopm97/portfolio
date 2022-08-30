@@ -37,18 +37,20 @@ function Projects() {
   if (projectsData) {
     return (
       <div
-        className="w-full pt-32 mt-[-8rem] mb-40 lg:pl-40 md:pl-16 sm:pl-10 xs:pl-8 pl-5 lg:pr-20 md:pr-16 sm:pr-10 xs:pr-8 pr-5"
+        className="mt-[-8rem] mb-40 w-full pt-32 pl-5 pr-5 xs:pl-8 xs:pr-8 sm:pl-10 sm:pr-10 md:pl-16 md:pr-16 lg:pl-40 lg:pr-20"
         id="projects"
       >
         <motion.div
-          className="xl:text-4xl lg:text-3xl xs:text-4xl text-3xl xs:mb-16 mb-10"
+          className="mb-10 text-3xl xs:mb-16 xs:text-4xl lg:text-3xl xl:text-4xl"
           initial={{ y: "50%", opacity: 0 }}
           whileInView={{ y: "0%", opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-std-white font-semibold">
-            <span className="mr-2 text-std-green font-spaceMono font-normal">2.</span>
+          <h1 className="font-semibold text-std-white">
+            <span className="mr-2 font-spaceMono font-normal text-std-green">
+              2.
+            </span>
             Projects
           </h1>
         </motion.div>

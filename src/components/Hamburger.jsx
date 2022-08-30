@@ -10,7 +10,7 @@ function Hamburger(props) {
       transition={{ duration: 1, delay: 0.5 }}
     >
       <RiMenu4Line
-        className="w-10 h-10 cursor-pointer stroke-0 fill-std-green"
+        className="h-10 w-10 cursor-pointer fill-std-green stroke-0"
         onClick={() => props.setMenu(true)}
       />
     </motion.div>
